@@ -4,8 +4,8 @@ from setuptools import find_packages, setup
 from uiautomation import VERSION, AUTHOR_MAIL
 
 requires = [
-        'comtypes>=1.1.10',
-        ]
+        'comtypes>=1.1.10', 'win32gui'
+]
 
 if sys.version < '3.5':
     requires.append('typing')

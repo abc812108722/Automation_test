@@ -2,7 +2,7 @@ from appium import webdriver
 import unittest
 import time, os
 from common import *
-from config import *
+from TextInfo import *
 
 count = 1
 
