@@ -1,11 +1,11 @@
 from functools import reduce
 from PIL import ImageGrab
 import cv2
-import os,sys,time
+import os, sys, time
 from ctypes import *
 from PyQt5.QtWidgets import QApplication
-
-
+import win32gui, win32api, win32con
+import pyautogui
 
 
 def elementIsExist(webdriver):
@@ -111,10 +111,8 @@ def AllScreenShot(name):
     im.save('C:\\Users\\530s\\PycharmProjects\\untitled\\Screenshot\\{0}.png'.format(name))
 
 
-
 def WaitTime(s):
     time.sleep(s)
-
 
 
 def GetForegroundWindowHandle():
@@ -133,3 +131,32 @@ def WindowScreenShot(name):
 
     img = screen.grabWindow(hwnd).toImage()
     img.save('C:\\Users\\530s\\PycharmProjects\\untitled\\Screenshot\\{0}.png'.format(name))
+
+
+# 获得窗口大小
+
+def getwindowssize(hwnd):
+    rect = win32gui.GetWindowRect(hwnd)
+    x = rect[0]
+    y = rect[1]
+    w = rect[2] - x
+    h = rect[3] - y
+    return (w, h)
+
+
+# 获得控件位置
+def getcontrollocation(hwnd):
+    rect = win32gui.GetWindowRect(hwnd)
+    return (rect[0], rect[1])
+
+
+# 获得屏幕分辨率
+def getscreensize():
+    return (win32api.GetSystemMetrics(win32con.SM_CXSCREEN), win32api.GetSystemMetrics(win32con.SM_CYSCREEN))
+
+# 获得鼠标的实时位置
+def getmouseposition():
+    while True:
+        x,y=pyautogui.position()
+        print(x,y)
+        time.sleep(0.2)
