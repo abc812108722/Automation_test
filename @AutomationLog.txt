@@ -1,3 +1,12 @@
 2021-07-08 10:32:21.609 test.py[10] <module> -> Find Control Timeout: {Name: '想家云(client端)', ControlType: WindowControl}
 2021-07-08 10:32:43.952 test.py[10] <module> -> Find Control Timeout: {Name: '想家云(client端)', ControlType: WindowControl}
 2021-07-08 11:27:53.138 Smartstoragetest.py[90] test_8_maximize -> Find Control Timeout: {Name: '向下还原', ControlType: ButtonControl}
+2021-07-22 10:56:09.614 Smartstoragetest.py[96] test_9_dragdropchangewindowsize -> Find Control Timeout: {ClassName: 'QWidget', ControlType: ImageControl}
+2021-07-22 13:36:20.364 Smartstoragetest.py[95] test_9_dragdropchangewindowsize -> Find Control Timeout: {ClassName: 'QLabel', ControlType: ImageControl}
+2021-07-22 13:54:04.594 Smartstoragetest.py[110] test_10_hidetotaskbar -> Find Control Timeout: {AutomationId: '1502', ControlType: ButtonControl}
+2021-07-22 13:55:05.717 Smartstoragetest.py[110] test_10_hidetotaskbar -> Find Control Timeout: {AutomationId: '1502', ControlType: ButtonControl}
+2021-07-22 13:56:09.521 Smartstoragetest.py[110] test_10_hidetotaskbar -> Find Control Timeout: {Name: 'Notification Chevron', ControlType: ButtonControl}
+2021-07-22 14:01:56.090 Smartstoragetest.py[110] test_10_hidetotaskbar -> Find Control Timeout: {Name: '想家云(client端)', ControlType: ButtonControl}
+2021-07-22 14:06:54.305 Smartstoragetest.py[110] test_10_hidetotaskbar -> Find Control Timeout: {Name: '想家云(client端)', ControlType: ButtonControl}
+2021-07-22 14:11:40.164 Smartstoragetest.py[109] test_10_hidetotaskbar -> Find Control Timeout: {Name: '想家云(client端)', ControlType: ButtonControl}
+2021-07-22 14:20:44.386 Smartstoragetest.py[110] test_10_hidetotaskbar -> Find Control Timeout: {Name: 'Notification Chevron', ControlType: ButtonControl}

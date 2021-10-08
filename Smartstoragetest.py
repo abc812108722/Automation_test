@@ -1,10 +1,11 @@
 import subprocess
 from PythonUIAutomation.uiautomation.uiautomation import *
-import os, sys, win32gui,win32api,win32con
+import os, sys, win32gui, win32api, win32con
 import unittest
 from common import *
 from ctypes import *
 from TextInfo import *
+import pyautogui
 
 user32 = windll.user32
 
@@ -88,13 +89,25 @@ class SmartstorageAppAutotest(unittest.TestCase):
     #     AllScreenShot("MaximizeWindow")
     #     self.window.ButtonControl(Name="最大化").Click()
     #    鼠标拖拽行为未完成
-    def test_9_dragdropchangewindowsize(self):
-        self.window = WindowControl(Name="想家云(client端)")
-        rect=getcontrollocation(self.window.NativeWindowHandle)
-        self.window.DragDrop(1301,74,1500,74)
+    # def test_9_dragdropchangewindowsize(self):
+    #     self.window = WindowControl(Name="想家云(client端)")
+    #
+    #     qlabel = self.window.ImageControl(ClassName="QLabel").MoveCursorToInnerPos()
+    #     pyautogui.dragTo(x=124, y=40, duration=3,button='left')
+    #     AllScreenShot("拖动1")
+        # pyautogui.dragTo(x=1421, y=50, duration=3, button='left')
+        # pyautogui.dragTo(x=86, y=649, duration=3, button='left')
+        # pyautogui.dragTo(x=328, y=62, duration=3, button='left')
+        # a=self.window.ThumbControl(ClassName="QSizeGrip").MoveCursorToInnerPos()
+        # pyautogui.dragTo(x=1700, y=1000, duration=3,button='left')
+        # AllScreenShot("拉伸窗口1")
+        # pyautogui.dragTo(x=20, y=20, duration=3, button='left')
 
-
-
+    def test_10_hidetotaskbar(self):
+        self.window=WindowControl(Name="想家云(client端)")
+        self.window.ButtonControl(Name="最小化").Click()
+        self.window2=WindowControl(Name="Desktop")
+        self.window2.ButtonControl(Name="Notification Chevron").Click()
 
 
 if __name__ == "__main__":
