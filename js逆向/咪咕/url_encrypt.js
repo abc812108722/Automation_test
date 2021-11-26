@@ -27,7 +27,7 @@ function t(t) {
 t.prototype.setKey = function(t) {
                 this.log && this.key,
                 this.key = new rt(t)
-            }
+           }
 t.prototype.setPublicKey = function(t) {
                 this.setKey(t)
             }
